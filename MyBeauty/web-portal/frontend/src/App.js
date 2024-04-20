@@ -46,7 +46,7 @@ function App() {
               localStorage.setItem('userDetails', JSON.stringify(userInfo));
             }
           }
-       setLoading(false);
+        setLoading(false);
     }, []);
 
     const triggerAppointmentsRefresh = () => {
