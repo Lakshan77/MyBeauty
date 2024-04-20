@@ -90,7 +90,7 @@ function App() {
                             </Typography>
                             {loggedIn && (
                                 <IconButton color="inherit" onClick={handleLogout}>
-                                <ExitToAppIcon />
+                                    <ExitToAppIcon />
                                 </IconButton>
                             )}
                         </Toolbar>
@@ -102,7 +102,7 @@ function App() {
                                 <Container maxWidth="sm">
                                     <Box sx={{ my: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                         <Typography component="h1" variant="h5" style={{ marginBottom: 20 }}>
-                                        Welcome, {userDetails.name}
+                                            Welcome, {userDetails.name}
                                         </Typography>
                                         <BookingForm userDetails={userDetails} handleOpenSnackbar={handleOpenSnackbar} onBookingSuccess={triggerAppointmentsRefresh} />
                                         <Divider style={{ margin: '20px 0' }} />
@@ -110,7 +110,7 @@ function App() {
                                     </Box>
                                 </Container>
                             } />
-                            </Route>
+                        </Route>
                     </Routes>
                 </Router>
                 <Snackbar
