@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Typography, Box, Paper, Container } from '@mui/material';
-import backgroundImage from './BC_Image'
+import backgroundImage from './BC_Image.jpg';
 
 const LoginPage = () => {
     return (

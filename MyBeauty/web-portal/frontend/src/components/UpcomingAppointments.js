@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getUpcomingAppointments } from '../services/appointmentService';
-import { services } from '../ServiceData';
-import { List, ListItem, ListItemText, Typography, Paper, Avatar, ListItemAvatar, Box } from '@mui/material';
+import { services } from '../serviceData';
+import { List, ListItem, ListItemText, Typography, Paper, Avatar, ListItemAvatar } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { format } from 'date-fns';
 

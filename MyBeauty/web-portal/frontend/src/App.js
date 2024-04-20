@@ -5,7 +5,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import CloseIcon from '@mui/icons-material/Close';
 import { ThemeProvider } from '@mui/material/styles';
 import Cookies from 'js-cookie';
-import theme from './theme';
+import style from './style';
 import LoginPage from './LoginPage';
 import BookingForm from './components/BookingForm';
 import ProtectedRoute from './ProtectedRoute';
@@ -80,7 +80,7 @@ function App() {
     }
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={style}>
             <CssBaseline>
                 <Router>
                     <AppBar position="static" color="primary">
