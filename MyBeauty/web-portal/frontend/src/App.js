@@ -83,12 +83,12 @@ function App() {
         <ThemeProvider theme={style}>
             <CssBaseline>
                 <Router>
-                    <AppBar position="static" color="primary">
+                    <AppBar position='static' color='primary'>
                         <Toolbar>
                             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                                 MyBeauty - For Your Beauty Forever
                             </Typography>
-                            {loggedIn && (
+                            { loggedIn && (
                                 <IconButton color="inherit" onClick={handleLogout}>
                                     <ExitToAppIcon />
                                 </IconButton>
@@ -96,24 +96,24 @@ function App() {
                         </Toolbar>
                     </AppBar>
                     <Routes>
-                        <Route path="/login" element={<LoginPage />} />
+                        <Route path='/login' element={<LoginPage/>} />
                         <Route element={<ProtectedRoute isLoggedIn={loggedIn} />}>
-                            <Route path="/" element={
+                            <Route path='/' element={
                                 <Container maxWidth="sm">
                                     <Box sx={{ my: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                        <Typography component="h1" variant="h5" style={{ marginBottom: 20 }}>
+                                        <Typography  component="h1" variant="h5" style={{ marginBottom: 20 }}>
                                             Welcome, {userDetails.name}
                                         </Typography>
                                         <BookingForm userDetails={userDetails} handleOpenSnackbar={handleOpenSnackbar} onBookingSuccess={triggerAppointmentsRefresh} />
-                                        <Divider style={{ margin: '20px 0' }} />
+                                        <Divider style={{margin: '20px 0'}} />
                                         <UpcomingAppointments email={userDetails.email} triggerRefresh={appointmentsRefreshKey} />
                                     </Box>
                                 </Container>
-                            } />
+                            }/>
                         </Route>
                     </Routes>
                 </Router>
-                <Snackbar
+                <Snackbar 
                     anchorOrigin={{
                         vertical: 'bottom',
                         horizontal: 'right',
@@ -132,6 +132,7 @@ function App() {
                 />
             </CssBaseline>
         </ThemeProvider>
+  
     );
 }
 
