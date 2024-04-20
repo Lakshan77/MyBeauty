@@ -123,11 +123,11 @@ function App() {
                     onClose={handleCloseSnackbar}
                     message={snackbar.message}
                     action={
-                    <React.Fragment>
-                        <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnackbar}>
-                            <CloseIcon fontSize="small" />
-                        </IconButton>
-                    </React.Fragment>
+                        <React.Fragment>
+                            <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnackbar}>
+                                <CloseIcon fontSize="small" />
+                            </IconButton>
+                        </React.Fragment>
                     }
                 />
             </CssBaseline>
