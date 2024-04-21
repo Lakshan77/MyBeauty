@@ -1,9 +1,9 @@
 require('dotenv').config()
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const axios = require('axios')
-const authenticate = require('./auth/authenticate')
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+const authenticate = require('./auth/authenticate');
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -16,10 +16,10 @@ async function getAccessToken() {
     const clientSecret = process.env.APPOINTMENTS_OAUTH_CLIENT_SECRET;
 
     try {
-        const accessToken = await authenticate(tokenUrl, clientId, clientSecret)
+        const accessToken = await authenticate(tokenUrl, clientId, clientSecret);
         return accessToken;
     }catch (error){
-        console.log('Error happening access token:', error);
+        console.error('Error happening access token:', error);
         throw error;
     }
 }
@@ -35,7 +35,7 @@ app.get('/appointments', async(req, res) => {
 
         const appointmentServiceUrl = process.env.APPOINTMENT_SERVICE_URL;
         const response = await axios.get(`${appointmentServiceUrl}/appointments?email=${email}`, {
-            header: {
+            headers: {
                 'Authorization': `Bearer ${accessToken}`,
             },
         });
@@ -58,7 +58,7 @@ app.post('/create-appointment', async (req, res) => {
         const response = await axios.post(`${appointmentServiceUrl}/appointments`, req.body, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`,
-            }
+            },
         });
 
         res.status(response.status).send(response.data);
