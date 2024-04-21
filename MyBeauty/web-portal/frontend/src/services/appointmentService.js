@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const APPOINTMENT_SERVICE_URL = '/choreo-apis/webportal/bff-service/appointments-5c6/v1.0/create-appointment';
+const APPOINTMENT_SERVICE_URL = window.configs.apiUrl;
 
 export const bookAppointment = async (appointmentDetails) => {
     try {
