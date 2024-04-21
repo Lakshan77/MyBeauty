@@ -14,7 +14,7 @@ import UpcomingAppointments from './components/UpcomingAppointments';
 function App() {
 
     const [loading, setLoading] = useState(true);
-    const [loggedIn, setLoggedIn] = useState(true);
+    const [loggedIn, setLoggedIn] = useState(false);
     const [userDetails, setUserDetails] = useState({ username: '' });
     const [snackbar, setSnackbar] = useState({
         open: false,
@@ -104,7 +104,7 @@ function App() {
                                         <Typography  component="h1" variant="h5" style={{ marginBottom: 20 }}>
                                             Welcome, {userDetails.name}
                                         </Typography>
-                                        <BookingForm userDetails={userDetails} handleOpenSnackbar={handleOpenSnackbar} onBookingSuccess={triggerAppointmentsRefresh} />
+                                        <BookingForm userDetails={userDetails} handleOpenSnackBar={handleOpenSnackbar} onBookingSuccess={triggerAppointmentsRefresh} />
                                         <Divider style={{margin: '20px 0'}} />
                                         <UpcomingAppointments email={userDetails.email} triggerRefresh={appointmentsRefreshKey} />
                                     </Box>

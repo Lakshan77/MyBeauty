@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const APPOINTMENT_SERVICE_URL = window.configs.apiUrl;
+const APPOINTMENT_SERVICE_URL = '/choreo-apis/webportal/bff-service/appointments-5c6/v1.0/create-appointment';
 
 export const bookAppointment = async (appointmentDetails) => {
     try {
@@ -34,7 +34,7 @@ export const getUpcomingAppointments = async (email) => {
         });
         return response.data;
     }catch (error){
-        console.log('Error happening upcoming appointments:', error);
+        console.error('Error happening upcoming appointments:', error);
         throw error;
     }
 };

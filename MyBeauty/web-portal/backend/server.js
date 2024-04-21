@@ -68,50 +68,6 @@ app.post('/create-appointment', async (req, res) => {
     }
 });
 
-// app.put('/edit-appointment/:id', async (req, res) => {
-//     try {
-//         const accessToken = await getAccessToken();
-
-//         const appointmentServiceUrl = process.env.APPOINTMENT_SERVICE_URL;
-//         if (!appointmentServiceUrl) {
-//             throw new Error('Appointment service URL is not defined in envirment variable');
-//         }
-
-//         const response = await axios.put(`${appointmentServiceUrl}/appointments/:id`, req.body, {
-//             headers: {
-//                 'Authorization': `Bearer ${accessToken}`,
-//             }
-//         });
-
-//         res.status(response.status).send(response.data);
-//     }catch (error) {
-//         console.error('Error getting appointment edit request:', error);
-//         res.status(error.response ? error.response.status : 500).send(error.message);
-//     }
-// });
-
-// app.delete('/delete-appointment/:id', async (req, res) => {
-//     try {
-//         const accessToken = await getAccessToken();
-
-//         const appointmentServiceUrl = process.env.APPOINTMENT_SERVICE_URL;
-//         if (!appointmentServiceUrl) {
-//             throw new Error('Appointment service URL is not defined in envirment variable');
-//         }
-
-//         const response = await axios.delete(`${appointmentServiceUrl}/appointments/:id`, req.body, {
-//             headers: {
-//                 'Authorization': `Bearer ${accessToken}`,
-//             }
-//         });
-
-//         res.status(response.status).send(response.data);
-//     }catch (error) {
-//         console.error('Error getting appointment delete request:', error);
-//         res.status(error.response ? error.response.status : 500).send(error.message);
-//     }
-// });
-
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

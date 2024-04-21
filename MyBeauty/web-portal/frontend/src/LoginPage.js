@@ -1,21 +1,21 @@
 import React from 'react';
 import { Button, Typography, Box, Paper, Container } from '@mui/material';
-// import backgroundImage from './BC_Image.jpg';
+import backgroundImage from './BC_Image.jpg';
 
 const LoginPage = () => {
     return (
-        // <Box
-        //     sx={{
-        //         minHeight: '100vh',
-        //         // backgroundImage: `url(${backgroundImage})`,
-        //         backgroundRepeat: 'no-repeat',
-        //         backgroundSize: 'cover',
-        //         backgroundPosition: 'center',
-        //         display: 'flex',
-        //         justifyContent: 'center',
-        //         alignItems: 'center',
-        //     }}
-        // >
+        <Box
+            sx={{
+                minHeight: '100vh',
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
         <Container maxWidth="XS">
             <Paper
                 elevation={3}

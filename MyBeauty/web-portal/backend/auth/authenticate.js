@@ -6,7 +6,7 @@ const authenticate = async(tokenUrl, clientId, clientSecret) => {
 
         const response = await axios.post(tokenUrl, 'grant_type=client_credentials', {
             header: {
-                'Const-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 'Authorization': `Basic ${credentials}`
             },
         });
