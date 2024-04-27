@@ -33,7 +33,7 @@ function sendEmail(Appointment appointment) returns error? {
 
     string serviceName = convertAndCapitalize(appointment.'service);
 
-    string finalContent = string`
+    string finalContent = string `
     Dear ${appointment.name},
 
     This is a reminder that you have an appointment scheduled for ${serviceName} at ${formattedAppointmentDate}.
